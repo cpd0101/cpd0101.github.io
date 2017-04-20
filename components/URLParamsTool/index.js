@@ -9,9 +9,7 @@ class URLParamsToolForm extends React.Component {
     super(props);
     this.state = {
       urlStr: '',
-      query: {
-        '': '',
-      },
+      query: {},
     };
   }
 
@@ -105,7 +103,7 @@ class URLParamsToolForm extends React.Component {
         {formItems}
         <FormItem>
           <Button type="dashed" onClick={this.handleKVAdd} style={{ width: '20%' }}>
-            <Icon type="plus" /> Add
+            <Icon type="plus" /> Add Parameter
           </Button>
         </FormItem>
       </Form>
