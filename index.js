@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { DatePicker } from 'antd';
+import URLParamsTool from './components/URLParamsTool';
 
 function App() {
   return (
     <div style={{ margin: 100 }}>
-      <h1>AntDesign Demo</h1>
+      <h1>URL参数拼接工具</h1>
       <hr /><br />
-      <DatePicker />
+      <URLParamsTool />
     </div>
   );
 }
