@@ -19,7 +19,7 @@ class URLParamsToolForm extends React.Component {
     const newQuery = {};
     Object.keys(query).forEach((k) => {
       if (prevKey === k) {
-        newQuery[key] = value;
+        newQuery[key.trim()] = value.trim();
       } else {
         newQuery[k] = query[k];
       }
@@ -50,7 +50,7 @@ class URLParamsToolForm extends React.Component {
   }
 
   handleURLChange = (e) => {
-    const urlStr = e.target.value;
+    const urlStr = e.target.value.trim();
     const uri = url.parse(urlStr, true)
     this.setState({
       urlStr,
