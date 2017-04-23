@@ -80,12 +80,8 @@ class URLParamsToolForm extends React.Component {
         <FormItem key={index}>
           <Input placeholder="URL Parameter Key" value={key} onChange={(e) => {
             this.handleKVChange(key, query[key], e.target.value, query[key]);
-          }} onInput={(e) => {
-            this.handleKVChange(key, query[key], e.target.value, query[key]);
           }} style={{ width: '30%', marginRight: '10px' }} />
           <Input placeholder="Value" value={query[key]} onChange={(e) => {
-            this.handleKVChange(key, query[key], key, e.target.value);
-          }} onInput={(e) => {
             this.handleKVChange(key, query[key], key, e.target.value);
           }} style={{ width: '30%', marginRight: '10px' }} />
           <Icon type="minus-circle-o" onClick={() => {
@@ -98,7 +94,7 @@ class URLParamsToolForm extends React.Component {
     return (
       <Form>
         <FormItem>
-          <Input placeholder="Enter URL here" value={urlStr} onChange={this.handleURLChange} onInput={this.handleURLChange} />
+          <Input placeholder="Enter URL here" value={urlStr} onChange={this.handleURLChange} />
         </FormItem>
         {formItems}
         <FormItem>
