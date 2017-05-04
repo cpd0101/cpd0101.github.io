@@ -1,10 +1,12 @@
 {
   "private": true,
   "entry": {
-    "index": "./index.js"
+    "index": "./index.js",
+    "stringify": "./stringify.js"
   },
   "dependencies": {
     "antd": "^2.1.0",
+    "lodash": "^4.17.4",
     "modulex-url": "^1.0.9",
     "react": "15.4.x",
     "react-dom": "15.4.x"
