@@ -5,12 +5,12 @@ import URLParamsTool from './components/URLParamsTool';
 
 function App() {
   return (
-    <div style={{ margin: 100 }}>
-      <h1>URL参数拼接工具</h1>
-      <hr /><br />
+    <div>
+      <h1>日常工作|常用工具</h1>
+      <hr />
       <URLParamsTool />
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('react-root'));

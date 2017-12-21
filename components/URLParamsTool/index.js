@@ -78,28 +78,33 @@ class URLParamsToolForm extends React.Component {
     const formItems = Object.keys(query).map((key, index) => {
       return (
         <FormItem key={index}>
-          <Input placeholder="URL Parameter Key" value={key} onChange={(e) => {
+          <Input placeholder="Key" value={key} onChange={(e) => {
             this.handleKVChange(key, query[key], e.target.value, query[key]);
           }} style={{ width: '30%', marginRight: '10px' }} />
           <Input placeholder="Value" value={query[key]} onChange={(e) => {
             this.handleKVChange(key, query[key], key, e.target.value);
           }} style={{ width: '30%', marginRight: '10px' }} />
-          <Icon type="minus-circle-o" onClick={() => {
+          <Button type="dashed" onClick={() => {
             this.handleKVDelete(key);
-          }} />
+          }}>
+            <Icon type="minus" />
+          </Button>
         </FormItem>
       )
     })
 
     return (
       <Form>
+        <FormItem style={{ marginBottom: '12px' }}>
+          <h3>URL参数拼接</h3>
+        </FormItem>
         <FormItem>
-          <Input placeholder="Enter URL here" value={urlStr} onChange={this.handleURLChange} />
+          <Input name="url" placeholder="输入URL" value={urlStr} onChange={this.handleURLChange} />
         </FormItem>
         {formItems}
         <FormItem>
-          <Button type="dashed" onClick={this.handleKVAdd} style={{ width: '20%' }}>
-            <Icon type="plus" /> Add Parameter
+          <Button onClick={this.handleKVAdd}>
+            新增参数
           </Button>
         </FormItem>
       </Form>
