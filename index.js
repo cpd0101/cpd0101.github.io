@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('react-root'));
+ReactDOM.render(<App />, document.getElementById('react-content'));
