@@ -879,7 +879,7 @@
 		</div>
 	</div>
 	<div class="footer">
-		Copyright &copy; 2017 AnyProxy. All Rights Reserved.
+		Copyright &copy; <span id="year">2017</span> AnyProxy. All Rights Reserved.
 		<br>
 		<a style="text-decoration:none;color:#939393;cursor:auto;" target="_blank" href="http://www.miitbeian.gov.cn/">浙ICP备17059456号</a>
 		<br>
@@ -949,6 +949,8 @@
 				alert("您好, 您的浏览器不支持自动加入收藏, 请使用浏览器菜单手动设置, 祝您使用愉快!");
 			}
 		}
+
+		document.getElementById('year').innerText = (new Date()).getFullYear();
 	</script>
 	<span id="myip" class="myip"><script type="text/javascript" src="//ip.chinaz.com/getip.aspx"></script></span>
   <script>
