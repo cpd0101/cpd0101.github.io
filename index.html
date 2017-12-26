@@ -1,33 +1,969 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta name="keywords" content="工作,工具,网站,导航" />
-    <meta name="description" content="处理一些繁琐的常规工作，收集一些常用的工具，分享一些国外名站以及国内网站导航" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <title>日常工作处理|常用工具收集|常用网站导航</title>
-    <link rel="stylesheet" href="/dist/index.css" />
-  </head>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>国外网站导航|国外名站导航|国外网址大全|Any小站导航</title>
+	<meta name="description" content="国内真正可以访问的中立客观的国外网站导航大全，收录汇集国外知名网站，涵括新闻、体育、学术、娱乐、生活等方面内容站点，欢迎收藏使用">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<style type="text/css">
+		body,
+		p,
+		ul,
+		li,
+		input {
+			font-family: \5fae\8f6f\96c5\9ed1, Verdana, Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			margin: 0;
+			padding: 0;
+		}
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		a {
+			color: #666;
+			text-decoration: none;
+			outline: none;
+		}
+
+		a:hover,
+		a:active,
+		a:focus {
+			color: #03c;
+			text-decoration: underline;
+		}
+
+		img {
+			border: 0;
+		}
+
+		.fl {
+			float: left;
+		}
+
+		.clearfix:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		.clearfix {
+			*zoom: 1;
+		}
+
+		.container {
+			width: 960px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		.topnav {
+			height: 72px;
+			line-height: 30px;
+			color: #666;
+		}
+
+		.topnav .logo {
+			float: left;
+			margin: 28px 0 0 0;
+		}
+
+		.topnav .logo a {
+			font-size: 38px;
+			font-weight: 600;
+			color: #1e90ff;
+		}
+
+		.topnav .logo a:hover,
+		a:active,
+		a:focus {
+			color: #ff4b33;
+			text-decoration: none;
+		}
+
+		.topnav ul {
+			float: right;
+		}
+
+		.topnav ul li {
+			float: left;
+			margin-left: 15px;
+		}
+
+		.topnav ul li a {
+			padding-right: 10px;
+		}
+
+		.search {
+			width: 960px;
+			margin: 5px auto;
+			line-height: 30px;
+		}
+
+		.search input {
+			float: left;
+			height: 28px;
+			line-height: 28px;
+		}
+
+		.search input.srch_text {
+			width: 250px;
+			border: 1px solid #3782bf;
+			border-left: 3px solid #3782bf;
+			outline: none;
+			background: #fafdff 5px 6px no-repeat;
+		}
+
+		.search input.srch_button {
+			width: 96px;
+			height: 30px;
+			line-height: 30px;
+			cursor: pointer;
+			margin-left: 5px;
+			border-radius: 4px;
+			appearance: button;
+			-moz-appearance: button;
+			-webkit-appearance: button;
+		}
+
+		.search .side {
+			width: 932px;
+			height: 105px;
+			border: 1px solid #ccc;
+			padding: 0 10px 0 10px;
+		}
+
+		.search .left {
+			float: left;
+		}
+
+		.search .right {
+			float: right;
+		}
+
+		.search label {
+			float: left;
+		}
+
+		.search h1 {
+			width: 200px;
+			height: 30px;
+			line-height: 30px;
+			margin: 0 auto;
+			font-size: 16pt;
+		}
+
+		.nav_list {
+			padding-bottom: 10px;
+		}
+
+		.title_bar {
+			margin: 0 0 8px 0;
+		}
+
+		.title {
+			font-size: 15px;
+			font-weight: bold;
+			color: #4169e1;
+		}
+
+		.line_hr {
+			width: 886px;
+			height: 10px;
+			*line-height: 0;
+			margin: 0 0 0 10px;
+			border-bottom: 1px #ddd solid;
+		}
+
+		ul.icon_list {
+			width: 1010px;
+			margin: 17px 0 0 2px;
+		}
+
+		ul.icon_list li {
+			position: relative;
+			float: left;
+			width: 56px;
+			height: 90px;
+			margin-right: 44px;
+		}
+
+		ul.icon_list li a {
+			display: block;
+			width: 56px;
+			height: 85px;
+			margin-bottom: 5px;
+		}
+
+		ul.icon_list li img {
+			width: 48px;
+			height: 48px;
+			padding: 4px;
+		}
+
+		ul.icon_list li span {
+			position: absolute;
+			bottom: 12px;
+			left: 0;
+			display: block;
+			width: 86px;
+			margin-left: -15px;
+			text-align: center;
+		}
+
+		.category {
+			width: 1010px;
+			line-height: 32px;
+			margin: 0 0 10px 0;
+		}
+
+		.category li {
+			float: left;
+			width: 100px;
+		}
+
+		.category li a:hover,
+		a:active,
+		a:focus {
+			text-decoration: none;
+			color: #fff;
+			background: #01b0ec;
+		}
+
+		.footer {
+			width: 920px;
+			margin: 0 auto;
+			border-top: 1px #ddd solid;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.showip {
+			margin: 0px auto;
+			width: 960px;
+			line-height: 30px;
+			text-align: center;
+			font-size: 9pt;
+			color: #008C00;
+		}
+
+    .myip {
+      display: none;
+    }
+	</style>
+</head>
+
 <body>
-  <div id="content">
-    <h1>网站导航</h1>
-    <hr>
-    <a target="_blank" href="https://www.anyproxy.cc/">在线网页代理</a>&nbsp;
-    <a target="_blank" href="https://shadowsocks.org/">Shadowsocks官网</a>&nbsp;
-    <a target="_blank" href="https://www.proxyit.cc/">免费SS账号</a>
-  </div>
-  <div id="react-content"></div>
-  <div id="footer">
-    &copy;2017&nbsp;
-    AnyProxy&nbsp;
-    <a target="_blank" href="http://www.miitbeian.gov.cn/">浙ICP备 17059456号</a>
-    <br>
-    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602008921" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+	<div class="container">
+		<div class="topnav">
+			<div class="logo">
+				<a href="/" rel="home">国外名站导航</a>
+			</div>
+			<ul>
+				<li>
+					<a href="javascript:void(0);" onclick="sethomepage();return false;" title="设置为浏览器首页">设为首页</a> |</li>
+				<li>
+					<a href="javascript:void(0);" onclick="addfav();return false;" title="添加到浏览器书签">加入收藏</a></li>
+			</ul>
+		</div>
+		<div id="showip" class="showip">
+      您现在的IP地址是：[ 未知 ] &nbsp; 来自： 未知
+    </div>
+		<div class="showip" style="color:red;">
+			如果发现你的IP显示的不是国内IP，恭喜你科学上网成功！
+		</div>
+		<div class="clearfix search">
+
+			<div class="side">
+				<div style="margin:0 auto;width:450px;padding:10px 0;">
+					<form target="_blank" action="https://www.anyproxy.cc/proxy" method="get">
+						<h1>在线网页代理</h1>
+						<div style="margin:10px auto;">
+							<div style="height:30px;">
+								<label>输入网址：</label>
+								<input type="url" class="srch_text" name="url" id="url">&nbsp;&nbsp;
+								<input type="submit" value="Go" class="srch_button" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			</form>
+		</div>
+		<div class="clearfix nav_list icon_list">
+			<div class="clearfix title_bar">
+				<span class="fl title">名站导航</span>
+				<div class="fl line_hr"></div>
+			</div>
+			<ul class="icon_list">
+				<li>
+					<a target="_blank" href="https://www.google.com/">
+						<img src="images/google.png" />
+						<span>Google</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.youtube.com/">
+						<img src="images/youtube.png" />
+						<span>YouTube</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.facebook.com/">
+						<img src="images/facebook.png" />
+						<span>Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://twitter.com/">
+						<img src="images/twitter.png" />
+						<span>Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.gmail.com">
+						<img src="images/gmail.png" />
+						<span>Gmail</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.yahoo.com/">
+						<img src="images/yahoo.png" />
+						<span>Yahoo!</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.msn.com/">
+						<img src="images/msn.png" />
+						<span>MSN</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.wikipedia.org/">
+						<img src="images/wikipedia.png" />
+						<span>Wikipedia</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.dropbox.com/">
+						<img src="images/dropbox.png" />
+						<span>Dropbox</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://vimeo.com/‎">
+						<img src="images/vimeo.png" />
+						<span>Vimeo</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.bbc.co.uk/zhongwen/simp/">
+						<img src="images/bbc.png" />
+						<span>BBC</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.cnn.com/">
+						<img src="images/cnn.png" />
+						<span>CNN</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://cn.nytimes.com/">
+						<img src="images/nytimes.png" />
+						<span>纽约时报</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.reuters.com/">
+						<img src="images/reuters.png" />
+						<span>路透社</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://asahichinese.com/">
+						<img src="images/asahi.png" />
+						<span>朝日新闻</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.zaobao.com/">
+						<img src="images/zaobao.png" />
+						<span>联合早报</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://nextmedia.com/">
+						<img src="images/nextmedia.png" />
+						<span>苹果日报</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.mingpao.com/">
+						<img src="images/mingpao.png" />
+						<span>明报</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://rthk.hk/">
+						<img src="images/rthk.png" />
+						<span>香港电台</span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.linkedin.com/">
+						<img src="images/linkedin.png" />
+						<span>LinkedIn</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix nav_list list1">
+			<div class="clearfix title_bar">
+				<span class="fl title">新闻资讯</span>
+				<div class="fl line_hr"></div>
+			</div>
+			<div class="category">
+				<ul>
+					<li>
+						<a target="_blank" href="http://news.google.com/">谷歌新闻</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://news.yahoo.com/">雅虎新闻</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://news.msn.com/">MSN新闻</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.foxnews.com/">福克斯新闻</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.ap.org/">美联社</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.time.com/">时代周刊</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.newsweek.com/">新闻周刊</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.usatoday.com/">今日美国</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.latimes.com/">洛杉矶时报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sunday-times.co.uk/">泰晤士报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.voachinese.com/">美国之音</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.chinese.rfi.fr/">RFI法广</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.dw.de/">德国之声</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://tw.news.yahoo.com/">Yahoo!奇摩</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://hk.news.yahoo.com/">Yahoo!香港</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.scmp.com/">南华早报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://on.cc/">东方互动</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.wenweipo.com/">文汇网</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.chinatimes.com/">中国时报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.want-daily.com/">旺报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.libertytimes.com.tw/">自由时报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://udn.com/">联合新闻网</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.singtao.com/">星岛日报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://chn.chosun.com/">朝鲜日报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.yomiuri.co.jp/">读卖新闻</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.janes.com/">简氏防务周刊</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://cn.wsj.com/">华尔街日报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.washingtonpost.com/">华盛顿邮报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.lefigaro.fr/">费加罗报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.guardian.co.uk/">卫报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.mirror.co.uk/">每日镜报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://observer.guardian.co.uk/">观察家报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.independent.co.uk/">独立报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.lesechos.fr/">回声报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.lemonde.fr/">世界报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.chicagotribune.com/">芝加哥论坛报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.smh.com.au/">悉尼晨报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.news.com.au/">新闻在线</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://news.cnet.com/">CNET科技</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.ftchinese.com/">FT中文网</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://the-sun.on.cc/">太阳报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.hket.com/">经济日报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.skypost.hk/">晴报</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix nav_list list1">
+			<div class="clearfix title_bar">
+				<span class="fl title">体育竞技</span>
+				<div class="fl line_hr"></div>
+			</div>
+			<div class="category">
+				<ul>
+					<li>
+						<a target="_blank" href="http://sports.yahoo.com/">雅虎体育</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://espn.go.com/">ESPN</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.nba.com/">NBA</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.skysports.com/">天空体育</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://msn.foxsports.com/">福克斯体育</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://nbcsports.nbcnews.com/">NBC体育</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.cbssportsnetwork.com/">CBS体育网</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.teamtalk.com/">TEAMtalk</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sports.com/">Sports英</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://sportsillustrated.cnn.com/">体育画报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sify.com/sports/">SIFY体育</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.tsn.ca/">TSN体育</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.cbssports.com/">CBS体育</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.usatoday.com/sports/">美国体育</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sportinglife.com/">体育生活</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sportingnews.com/">体育新闻</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sportsnetwork.com/">体育网络</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.mundodeportivo.com/">世界体育报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sportbild.de/">体育图片报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.kicker.de/">踢球者</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://espnfc.com/">ESPN FC</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.goal.com/">GOAL</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.tvgolo.com/">TVGOLO</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://as.com/">阿斯报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.marca.com/">马卡报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.lequipe.fr/">队报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.gazzetta.it/">米兰体育报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.corrieredellosport.it/">罗马体育报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.tuttosport.com/">都灵体育报</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sikids.com/">SI KIDS</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.olympic.org/">奥林匹克</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.fifa.com/">国际足联</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.fiba.com/">国际篮联</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.iaaf.org/">国际田联</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.itftennis.com/">国际网联</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.fina.org/">国际泳联</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.fivb.ch/">国际排联</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.ittf.com/">国际乒联</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.wbaonline.com/">国际拳联</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.paralympic.org/">国际残联</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix nav_list list1">
+			<div class="clearfix title_bar">
+				<span class="fl title">娱乐休闲</span>
+				<div class="fl line_hr"></div>
+			</div>
+			<div class="category">
+				<ul>
+					<li>
+						<a target="_blank" href="http://digg.com/">DIGG</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.imdb.com/">IMDb</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.grammy.com/">格莱美奖</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.cbs.com/shows/big_bang_theory/">生活大爆炸</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.bbc.co.uk/ukchina/simp/">BBC英伦网</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.festival-cannes.com/">戛纳电影节</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://uncyclopedia.tw/">伪基百科</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://igossip.com/">iGossip</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.fimela.com/">FIMELA</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.apple.com/itunes/">iTunes</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://omg.yahoo.com/">Omg!娱乐</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.theonion.com/">The Onion</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.rottentomatoes.com/">烂番茄</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.flixster.com/">Flixster</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://perezhilton.com/">Perez Hilton</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.popsugar.com/">PopSugar</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.justjared.com/">Just Jared</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.ew.com/">娱乐周刊</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.celebparasite.com/">CelebParasite</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.people.com/">People</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.tmz.com/">TMZ.COM</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.billboard.com/">Billboard</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.thesun.co.uk/">The Sun</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.fhm.com/">男人帮</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.penthouse.com/">阁楼杂志</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.playboy.com/">花花公子</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix nav_list list1">
+			<div class="clearfix title_bar">
+				<span class="fl title">视频影音</span>
+				<div class="fl line_hr"></div>
+			</div>
+			<div class="category">
+				<ul>
+					<li>
+						<a target="_blank" href="http://www.dailymotion.com/">Dailymotion</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.hulu.com/">Hulu</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.howcast.com/">Howcast</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.break.com/">Break</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.nicovideo.jp/">niconico</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.mtv.com/">MTV</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.youmaker.com/">优美客</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.pandora.tv/">潘多拉TV</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.screenjunkies.com/">iFilm</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.goyeah.com/">Goyeah</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://online.hk/">香港短片网</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://now.com/">now宽频</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://tv.on.cc/">notv东方</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://vlog.xuite.net/">随意窝影音</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.yam.com/">番薯藤</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://tw.news.yahoo.com/video/">奇摩影音</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.tvb.com/">TVB无线</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.hkatv.com/">ATV亚视</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://hk.news.yahoo.com/video/">雅虎香港</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.im.tv/">Erapost</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.channelv.com/">Channel [V]</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.live365.com/">Live365</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.spinner.com/">Spinner</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.shoutcast.com/">NetRadio</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.mixify.com/">Mixify DJ</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.pandora.com/">Pandora电台</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.vevo.com/">VEVO音乐</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.oiktv.com/">歌词帝国</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		Copyright &copy; 2017 AnyProxy. All Rights Reserved.
+		<br>
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">浙ICP备17059456号</a>
+		<br>
+		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602008921" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
       <img src="https://gw.alipayobjects.com/zos/rmsportal/dWzWkqxlJlCkcbqQdqlt.png" style="float:left;"/>
       <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33010602008921号</p>
     </a>
-  </div>
-  <script src="/dist/index.js"></script>
+	</div>
+	<script>
+		function IsURL(str_url) {
+			var strRegex = "^((https|http|ftp|rtsp|mms)?://)"
+				+ "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" //ftp的user@ 
+				+ "(([0-9]{1,3}.){3}[0-9]{1,3}" // IP形式的URL- 199.194.52.184 
+				+ "|" // 允许IP和DOMAIN（域名）
+				+ "([0-9a-z_!~*'()-]+.)*" // 域名- www. 
+				+ "([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]." // 二级域名 
+				+ "[a-z]{2,6})" // first level domain- .com or .museum 
+				+ "(:[0-9]{1,4})?" // 端口- :80 
+				+ "((/?)|" // a slash isn't required if there is no file name 
+				+ "(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$";
+			var re = new RegExp(strRegex);
+			return re.test(str_url)
+		}
+		function check() {
+			var url = document.getElementById("url").value;
+			if (!url || url == null || url == "") {
+				alert("url不能为空！");
+				return false;
+			}
+			if (!IsURL(url)) {
+				alert("url格式不正确！");
+				return false;
+			}
+			return true;
+		}
+		var sethomepage = function () {
+			if (document.all) {
+				document.body.style.behavior = 'url(#default#homepage)';
+				document.body.setHomePage(window.location.href);
+			} else if (window.sidebar) {
+				if (window.netscape) {
+					try {
+						netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+					} catch (e) {
+						alert("该操作被浏览器拒绝, 如果想启用该功能, 请在地址栏内输入 about:config, 然后将项 signed.applets.codebase_principal_support 值该为true");
+					}
+				}
+				var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+				prefs.setCharPref('browser.startup.homepage', window.location.href);
+			} else {
+				alert('您好, 您的浏览器不支持直接设为首页, 请使用浏览器菜单手动设置本站为首页, 祝您使用愉快!');
+			}
+		}
+
+		// 加入收藏
+		var addfav = function () {
+			if (document.all) {
+				try {
+					window.external.addFavorite(window.location.href, document.title);
+				} catch (e) {
+					alert("您好, 您的浏览器不支持自动加入收藏, 请使用浏览器菜单手动设置, 祝您使用愉快!");
+				}
+
+			} else if (window.sidebar) {
+				window.sidebar.addPanel(document.title, window.location.href, "");
+			} else {
+				alert("您好, 您的浏览器不支持自动加入收藏, 请使用浏览器菜单手动设置, 祝您使用愉快!");
+			}
+		}
+	</script>
+	<span id="myip" class="myip"><script type="text/javascript" src="//ip.chinaz.com/getip.aspx"></script></span>
+  <script>
+    (function () {
+      var myip = document.getElementById('myip');
+      var html = myip.innerText;
+      var pat = /\{.+\}/;
+      try {
+        var ip = (new Function('return ' + html.match(pat)))();
+        var showip = document.getElementById('showip');
+        showip.innerHTML = '您现在的IP地址是：[ ' + ip.ip + ' ] &nbsp; 来自： ' + ip.address;
+      } catch (e) {
+        // todo
+      }
+    })();
+  </script>
+  <script src="https://hm.baidu.com/hm.js?9ec911f310714b9fcfafe801ba8ae42a"></script>
 </body>
+
 </html>
