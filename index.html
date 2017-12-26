@@ -251,6 +251,7 @@
 			text-align: center;
 			font-size: 9pt;
 			color: #008C00;
+			visibility: hidden;
 		}
 
     .myip {
@@ -879,7 +880,7 @@
 		</div>
 	</div>
 	<div class="footer">
-		Copyright &copy; <span id="year">2017</span> AnyProxy. All Rights Reserved.
+		Copyright &copy; <span id="year">2018</span> AnyProxy. All Rights Reserved.
 		<br>
 		<a style="text-decoration:none;color:#939393;cursor:auto;" target="_blank" href="http://www.miitbeian.gov.cn/">浙ICP备17059456号</a>
 		<br>
@@ -949,26 +950,21 @@
 				alert("您好, 您的浏览器不支持自动加入收藏, 请使用浏览器菜单手动设置, 祝您使用愉快!");
 			}
 		}
-
-		document.getElementById('year').innerText = (new Date()).getFullYear();
-	</script>
-	<span id="myip" class="myip"><script type="text/javascript" src="//ip.chinaz.com/getip.aspx"></script></span>
-  <script>
-    (function () {
-      var myip = document.getElementById('myip');
-      var html = myip.innerText;
-      var pat = /\{.+\}/;
-      try {
-        var ip = (new Function('return ' + html.match(pat)))();
-        var showip = document.getElementById('showip');
-        showip.innerHTML = '您现在的IP地址是：[ ' + ip.ip + ' ] &nbsp; 来自： ' + ip.address;
-      } catch (e) {
-        // todo
-      }
-    })();
 	</script>
 	<script src="https://gw.alipayobjects.com/os/rmsportal/JdEpaOqbNgKDgeKLvRXV.js"></script>
 	<script>
+		$.ajax({
+			url: 'https://www.anyproxy.cc/ss/getip',
+			dataType: 'jsonp',
+			success: function (arr) {
+				if (arr && arr.length) {
+					var ip = arr[0];
+					document.getElementById('showip').innerHTML = '您现在的IP地址是：[ ' + ip.address + ' ] &nbsp; 来自： ' + ip.location;
+					$('.showip').css('visibility', 'visible');
+				}
+			}
+		});
+
 		$('#science').on('click', function (e) {
 			if ($(this).data('science')) {
 				$('.nav_list a').each(function (e) {
@@ -985,6 +981,8 @@
 				$(this).data('science', true);
 			}
 		});
+
+		document.getElementById('year').innerHTML = (new Date()).getFullYear();
 	</script>
   <script src="https://hm.baidu.com/hm.js?9ec911f310714b9fcfafe801ba8ae42a"></script>
 </body>
