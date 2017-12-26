@@ -133,7 +133,7 @@
 		}
 
 		.search .side {
-			width: 932px;
+			width: 934px;
 			height: 105px;
 			border: 1px solid #ccc;
 			padding: 0 10px 0 10px;
@@ -269,14 +269,16 @@
 				<li>
 					<a href="javascript:void(0);" onclick="sethomepage();return false;" title="设置为浏览器首页">设为首页</a> |</li>
 				<li>
-					<a href="javascript:void(0);" onclick="addfav();return false;" title="添加到浏览器书签">加入收藏</a></li>
+					<a href="javascript:void(0);" onclick="addfav();return false;" title="添加到浏览器书签">加入收藏</a> |</li>
+				<li>
+					<a id="science" href="javascript:void(0);" title="国外网址换成国内网址">科学上网</a> |</li>
 			</ul>
 		</div>
 		<div id="showip" class="showip">
       您现在的IP地址是：[ 未知 ] &nbsp; 来自： 未知
     </div>
 		<div class="showip" style="color:red;">
-			如果发现你的IP显示的不是国内IP，恭喜你科学上网成功！
+			如果发现你的IP显示的不是国内IP，那么恭喜你科学上网成功！
 		</div>
 		<div class="clearfix search">
 
@@ -287,7 +289,7 @@
 						<div style="margin:10px auto;">
 							<div style="height:30px;">
 								<label>输入网址：</label>
-								<input type="url" class="srch_text" name="url" id="url">&nbsp;&nbsp;
+								<input type="url" class="srch_text" name="url" id="url" required>&nbsp;&nbsp;
 								<input type="submit" value="Go" class="srch_button" />
 							</div>
 						</div>
@@ -962,7 +964,26 @@
         // todo
       }
     })();
-  </script>
+	</script>
+	<script src="https://gw.alipayobjects.com/os/rmsportal/JdEpaOqbNgKDgeKLvRXV.js"></script>
+	<script>
+		$('#science').on('click', function (e) {
+			if ($(this).data('science')) {
+				$('.nav_list a').each(function (e) {
+					this.href = $(this).data('href');
+				});
+				$(this).text('科学上网');
+				$(this).data('science', false);
+			} else {
+				$('.nav_list a').each(function (e) {
+					$(this).data('href', this.href);
+					this.href = 'https://www.anyproxy.cc/proxy?target=' + btoa(encodeURI(this.href));
+				});
+				$(this).text('网址还原');
+				$(this).data('science', true);
+			}
+		});
+	</script>
   <script src="https://hm.baidu.com/hm.js?9ec911f310714b9fcfafe801ba8ae42a"></script>
 </body>
 
