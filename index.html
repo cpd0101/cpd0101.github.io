@@ -342,15 +342,21 @@
 						</a>
 					</li>
 					<li>
-						<a target="_blank" href="https://www.youtube.com/">
-							<img src="images/youtube.png" />
-							<span>YouTube</span>
+						<a target="_blank" href="https://stackoverflow.com/">
+							<img src="images/stackoverflow.png" />
+							<span>S.O.</span>
 						</a>
 					</li>
 					<li>
 						<a target="_blank" href="https://www.wikipedia.org/">
 							<img src="images/wikipedia.png" />
 							<span>Wikipedia</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/">
+							<img src="images/youtube.png" />
+							<span>YouTube</span>
 						</a>
 					</li>
 					<li>
@@ -402,7 +408,7 @@
 						</a>
 					</li>
 					<li>
-						<a target="_blank" href="http://www.cnn.com/">
+						<a target="_blank" href="https://edition.cnn.com/">
 							<img src="images/cnn.png" />
 							<span>CNN</span>
 						</a>
@@ -420,7 +426,7 @@
 						</a>
 					</li>
 					<li>
-						<a target="_blank" href="http://asahichinese-j.com/">
+						<a target="_blank" href="https://asahichinese-j.com/">
 							<img src="images/asahi.png" />
 							<span>朝日新闻</span>
 						</a>
@@ -985,6 +991,23 @@
 			}
 		});
 
+		function getProxyURL(src) {
+			if (typeof src === 'string') {
+				if (/^\/\//.test(src)) {
+					src = location.protocol + src;
+				}
+				if (!/^http(s)?\:/.test(src)) {
+					return src;
+				}
+				var reg = /^http(s)?\:\/\/(.+\.)?(anyproxy|proxyit|baidu|zhihu|sohu|alipayobjects|bdstatic|gtimg|qq|itc|sohucs|taobao|tmall)\.(cc|cn|com|net|org)/i;
+				if (reg && typeof reg.test === 'function' && reg.test(src)) {
+					return src;
+				}
+				return 'https://www.proxyit.cc/proxy?target=' + btoa(encodeURI(src));
+			}
+			return src;
+		}
+
 		$('#science').on('click', function (e) {
 			if ($(this).data('science')) {
 				$('.nav_list a').each(function (e) {
@@ -995,7 +1018,7 @@
 			} else {
 				$('.nav_list a').each(function (e) {
 					$(this).data('href', this.href);
-					this.href = 'https://www.proxyit.cc/proxy?target=' + btoa(encodeURI(this.href));
+					this.href = getProxyURL(this.href);
 				});
 				$(this).text('网址还原');
 				$(this).data('science', true);
