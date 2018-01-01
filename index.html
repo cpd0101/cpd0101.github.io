@@ -279,7 +279,7 @@
 				<li>
 					<a href="javascript:void(0);" onclick="addfav();return false;" title="添加到浏览器书签">加入收藏</a>|</li>
 				<li>
-					<a id="science" href="javascript:void(0);" title="替换为可访问网址">科学上网</a>|</li>
+					<a class="science-surf" href="javascript:void(0);" title="替换为可访问网址">科学上网</a>|</li>
 				<li>
 					<a target="_blank" href="https://www.proxyit.cc/feedback">意见反馈</a>|</li>
 			</ul>
@@ -289,9 +289,9 @@
 				您现在的IP地址是：[ 未知 ] &nbsp; 来自： 未知
 			</div>
 			<div style="color:red;">
-				如果发现你的IP显示是国内IP，请点击右上角科学上网！
+				如果发现您的IP显示为国内IP，请点击右上角的 <a class="science-surf" href="javascript:void(0);" title="替换为可访问网址">科学上网</a>！
 				<br>
-				另外点击下面的在线网页代理有惊喜！
+				另外点击下面的 <a target="_blank" href="https://www.proxyit.cc/">在线网页代理</a>，可能有意外收获！
 			</div>
 		</div>
 		<div class="clearfix search">
@@ -1014,20 +1014,20 @@
 			return src;
 		}
 
-		$('#science').on('click', function (e) {
-			if ($(this).data('science')) {
+		$('.science-surf').on('click', function (e) {
+			if ($('.science-surf').data('science')) {
 				$('.nav_list a').each(function (i) {
 					this.href = $(this).data('href');
 				});
-				$(this).text('科学上网');
-				$(this).data('science', false);
+				$('.science-surf').text('科学上网');
+				$('.science-surf').data('science', false);
 			} else {
 				$('.nav_list a').each(function (i) {
 					$(this).data('href', this.href);
 					this.href = getProxyURL(this.href);
 				});
-				$(this).text('网址还原');
-				$(this).data('science', true);
+				$('.science-surf').text('网址还原');
+				$('.science-surf').data('science', true);
 			}
 		});
 
