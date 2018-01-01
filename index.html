@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>国外网站导航|国外网址大全|国外名站导航|国内名站导航|Any小站导航</title>
 	<meta name="keywords" content="Any小站, Proxy, 国外, 名站, 导航" />
-	<meta name="description" content="国内真正可以访问的中立客观的国外网站导航大全，收录汇集国外知名网站，涵括新闻、体育、学术、娱乐、生活等方面内容站点，欢迎收藏使用">
+	<meta name="description" content="国内真正可以访问的国外网站导航大全，收录汇集国外知名网站，涵括新闻、体育、生活、娱乐等方面内容站点，欢迎收藏使用">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<style type="text/css">
@@ -989,7 +989,7 @@
 			success: function (arr) {
 				if (arr && arr.length) {
 					var ip = arr[0];
-					document.getElementById('ip-address').innerHTML = '您现在的IP地址是：[ ' + ip.address + ' ] &nbsp; 来自： ' + ip.location;
+					$('#ip-address').html('您现在的IP地址是：[ ' + ip.address + ' ] &nbsp; 来自： ' + ip.location);
 					$('.showip').css('visibility', 'visible');
 				}
 			}
@@ -1014,13 +1014,13 @@
 
 		$('#science').on('click', function (e) {
 			if ($(this).data('science')) {
-				$('.nav_list a').each(function (e) {
+				$('.nav_list a').each(function (i) {
 					this.href = $(this).data('href');
 				});
 				$(this).text('科学上网');
 				$(this).data('science', false);
 			} else {
-				$('.nav_list a').each(function (e) {
+				$('.nav_list a').each(function (i) {
 					$(this).data('href', this.href);
 					this.href = getProxyURL(this.href);
 				});
@@ -1029,7 +1029,12 @@
 			}
 		});
 
-		document.getElementById('year').innerHTML = (new Date()).getFullYear();
+		$('a').each(function (i) {
+			$(this).data('aspm', i);
+		}).on('click', function (e) {
+			window._hmt = window._hmt || [];
+			_hmt.push(['_trackEvent', 'a', 'click', $(this).data('aspm')]);
+		});
 	</script>
 	<script src="https://hm.baidu.com/hm.js?9ec911f310714b9fcfafe801ba8ae42a"></script>
 	<script src="https://zz.bdstatic.com/linksubmit/push.js"></script>
