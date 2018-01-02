@@ -4,10 +4,12 @@ this.addEventListener('fetch', function (event) {
   if (!/^http(s)?\:/.test(url)) {
     return;
   }
-  var reg = /^http(s)?\:\/\/(.+\.)?(anyproxy|proxyit|baidu|zhihu|sohu|alipayobjects|bdstatic|gtimg|qq|itc|sohucs|taobao|tmall)\.(cc|cn|com|net|org)/i;
+  var reg = /^http(s)?\:\/\/([^\/]+\.)?(anyproxy|proxyit|baidu|zhihu|sohu|alipayobjects|bdstatic|gtimg|qq|itc|sohucs|tmall)\.(cc|cn|com|net|org)/i;
   if (reg.test(url)) {
     return;
   }
+  url = url.replace(/rf=[^&]*/, 'rf=' + encodeURIComponent(location.href));
+  url = url.replace(/dr=[^&]*/, 'dr=');
   var targetURL = 'https://www.proxyit.cc/proxy?target=' + btoa(encodeURI(url)) + '&nocookie=true';
   var initOptions = {
     method: request.method,
