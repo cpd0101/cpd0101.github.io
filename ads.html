@@ -27,6 +27,7 @@
     $('#ads').attr('biz-keyword', query.keyword);
     var parentwin = window.parent;
     if (navigator.serviceWorker && location.protocol === 'https:') {
+      parentwin.postMessage($('#ads').attr('data-tmpl'), '*');
       var intervalId = setInterval(function () {
         var iframe = $('iframe').contents();
         if (iframe.length) {
@@ -34,7 +35,6 @@
           iframe.on('click', function (e) {
             parentwin.postMessage('click', '*');
           });
-          parentwin.postMessage($('#ads').attr('data-tmpl'), '*');
         }
       }, 1000 / 60);
     }
