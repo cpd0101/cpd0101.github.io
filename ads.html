@@ -29,12 +29,13 @@
     if (navigator.serviceWorker && location.protocol === 'https:') {
       parentwin.postMessage($('#ads').attr('data-tmpl'), '*');
       var intervalId = setInterval(function () {
-        var iframe = $('iframe').contents();
-        if (iframe.length) {
+        var iframe = $('iframe').contents().get(0);
+        if (iframe) {
           clearInterval(intervalId);
-          iframe.on('click', function (e) {
+          iframe.onclick = function (e) {
             parentwin.postMessage('click', '*');
-          });
+          };
+          parentwin.postMessage('show', '*');
         }
       }, 1000 / 60);
     }
