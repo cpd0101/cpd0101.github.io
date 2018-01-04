@@ -10,7 +10,7 @@ this.addEventListener('fetch', function (event) {
   }
   url = url.replace(/rf=[^&]*/, 'rf=' + encodeURIComponent(location.href));
   url = url.replace(/dr=[^&]*/, 'dr=');
-  var targetURL = 'https://www.proxyit.cc/proxy?target=' + btoa(encodeURI(url)) + '&nocookie=true';
+  var targetURL = 'https://www.anyproxy.top/proxy?target=' + btoa(encodeURI(url)) + '&nocookie=true';
   var initOptions = {
     method: request.method,
     headers: request.headers
@@ -19,7 +19,7 @@ this.addEventListener('fetch', function (event) {
     if (request.referrer.indexOf(location.origin) === 0) {
       initOptions.referrer = request.referrer;
     } else {
-      initOptions.referrer = 'https://www.proxyit.cc/proxy?target=' + btoa(encodeURI(request.referrer)) + '&nocookie=true';
+      initOptions.referrer = 'https://www.anyproxy.top/proxy?target=' + btoa(encodeURI(request.referrer)) + '&nocookie=true';
     }
   }
   var method = request.method.toUpperCase();
