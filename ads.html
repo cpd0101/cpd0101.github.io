@@ -26,11 +26,9 @@
     var query = getQuery(location.search);
     $('#ads').attr('biz-keyword', query.keyword);
     var parentwin = window.parent;
-    window.onerror = function (e) {
-      if (navigator.serviceWorker && location.protocol === 'https:') {
-        parentwin.postMessage($('#ads').attr('data-tmpl'), '*');
-      }
-    };
+    if (navigator.serviceWorker && location.protocol === 'https:') {
+      parentwin.postMessage($('#ads').attr('data-tmpl'), '*');
+    }
   </script>
   <script type="text/javascript">
     (function (win, doc) {

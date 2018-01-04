@@ -23,8 +23,21 @@ this.addEventListener('fetch', function (event) {
     }
   }
   var method = request.method.toUpperCase();
+  var isClickJs = url.indexOf('https://alimama.alicdn.com/tkapi/click.js') === 0;
   if (method === 'GET' || method === 'HEAD') {
-    event.respondWith(fetch(new Request(targetURL, initOptions)));
+    if (isClickJs) {
+      event.respondWith(fetch(new Request(targetURL, initOptions)).then(function (response) {
+        return response.text().then(function (text) {
+          return new Response('(function () { var top = window; ' + text + ' })()', {
+            status: response.status,
+            statusText: response.statusText,
+            headers: response.headers
+          });
+        });
+      }));
+    } else {
+      event.respondWith(fetch(new Request(targetURL, initOptions)));
+    }
   } else {
     event.respondWith(request.arrayBuffer().then(function (body) {
       initOptions.body = body;
