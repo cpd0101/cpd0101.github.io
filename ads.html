@@ -32,9 +32,11 @@
         var iframe = $('iframe').contents().get(0);
         if (iframe) {
           clearInterval(intervalId);
-          iframe.onclick = function (e) {
-            parentwin.postMessage('click', '*');
-          };
+          setTimeout(function (e) {
+            iframe.onclick = function (e) {
+              parentwin.postMessage('click', '*');
+            };
+          }, 1000);
           parentwin.postMessage('show', '*');
         }
       }, 1000 / 60);
