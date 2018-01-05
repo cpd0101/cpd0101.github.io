@@ -25,7 +25,9 @@
 
     try {
       var query = get_query(location.search);
-      jump_url = atob(query.url);
+      if (query.url) {
+        jump_url = atob(query.url);
+      }
     } catch (e) {
       jump_url = "https://qr.alipay.com/c1x07349nmv6ni3cuyc6fd3";
     }
