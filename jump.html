@@ -25,6 +25,9 @@
 
     try {
       var query = get_query(location.search);
+      if (query.title != undefined) {
+        document.title = query.title;
+      }
       if (query.url) {
         jump_url = atob(query.url);
       }
@@ -42,7 +45,7 @@
 
     function is_android() {
       var a = navigator.userAgent.toLowerCase();
-      if (a.match(/(Android|SymbianOS)/i)) {
+      if (/(Android|SymbianOS)/i.test(a)) {
         return true;
       } else {
         return false;
@@ -51,7 +54,7 @@
 
     function is_ios() {
       var a = navigator.userAgent.toLowerCase();
-      if (/iphone|ipad|ipod/.test(a)) {
+      if (/iphone|ipad|ipod/i.test(a)) {
         return true;
       } else {
         return false;
