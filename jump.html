@@ -86,11 +86,13 @@
           location.href = jump_url;
         } else {
           window.close();
-          WeixinJSBridge.call("closeWindow");
+          if (typeof WeixinJSBridge != "undefined") {
+            WeixinJSBridge.call("closeWindow");
+          }
         }
       }
 
-      function onAutoinit() {
+      function onAutoInit() {
         if (is_android()) {
           android_auto_jump();
           return false;
@@ -99,15 +101,20 @@
           ios_auto_jump();
           return false;
         }
+        if (jump_url != "") {
+          location.href = jump_url;
+        } else {
+          window.close();
+        }
       }
 
       if (is_weixin()) {
         if (typeof WeixinJSBridge == "undefined") {
           if (document.addEventListener) {
-            document.addEventListener("WeixinJSBridgeReady", onAutoinit);
+            document.addEventListener("WeixinJSBridgeReady", onAutoInit);
           } else if (document.attachEvent) {
-            document.attachEvent("WeixinJSBridgeReady", onAutoinit);
-            document.attachEvent("onWeixinJSBridgeReady", onAutoinit);
+            document.attachEvent("WeixinJSBridgeReady", onAutoInit);
+            document.attachEvent("onWeixinJSBridgeReady", onAutoInit);
           }
           return;
         }
@@ -118,13 +125,13 @@
           if (document.addEventListener) {
             document.addEventListener("qbrowserVisibilityChange", function (e) {
               if (e.hidden) {
-                onAutoinit();
+                onAutoInit();
               }
             });
           } else if (document.attachEvent) {
             document.attachEvent("qbrowserVisibilityChange", function (e) {
               if (e.hidden) {
-                onAutoinit();
+                onAutoInit();
               }
             });
           }
@@ -133,7 +140,7 @@
       }
 
       $(function () {
-        onAutoinit();
+        onAutoInit();
       });
     })();
   </script>
