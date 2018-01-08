@@ -69,16 +69,16 @@
       }
 
       function android_auto_jump() {
-        if (typeof WeixinJSBridge != "undefined") {
-          WeixinJSBridge.invoke("jumpToInstallUrl", {}, function (e) { });
-          window.close();
-          WeixinJSBridge.call("closeWindow");
-        } else {
-          if (jump_url != "") {
-            location.href = jump_url;
-          } else {
-            window.close();
+        if (jump_url != "") {
+          if (typeof WeixinJSBridge != "undefined") {
+            WeixinJSBridge.invoke("jumpToInstallUrl", {}, function (e) { });
           }
+          location.href = jump_url;
+        } else {
+          if (typeof WeixinJSBridge != "undefined") {
+            WeixinJSBridge.call("closeWindow");
+          }
+          window.close();
         }
       }
 
@@ -86,10 +86,10 @@
         if (jump_url != "") {
           location.href = jump_url;
         } else {
-          window.close();
           if (typeof WeixinJSBridge != "undefined") {
             WeixinJSBridge.call("closeWindow");
           }
+          window.close();
         }
       }
 
